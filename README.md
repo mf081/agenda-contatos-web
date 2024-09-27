@@ -7,7 +7,7 @@ Este projeto é uma aplicação simples de Agenda de Contatos, desenvolvida como
 Este projeto foi desenvolvido com as seguintes tecnologias:
 
 - **HTML5** para a estruturação das páginas.
-- **CSS3** para o design visual e layout, utilizando Bootstrap para facilitar a estilização.
+- **CSS3** e **SCSS** para o design visual e layout, utilizando Bootstrap para facilitar a estilização.
 - **JavaScript (ES6)** para a manipulação do DOM e criação de interatividade.
 - **localStorage** para armazenamento dos dados dos contatos.
 
@@ -39,6 +39,9 @@ $ git clone https://github.com/mf081/agenda-contatos-web.git
 $ cd agenda-contatos-web
 
 # Abra o arquivo index.html em seu navegador.
+```
+## 🌐 Acesse a Aplicação
+Você pode acessar a versão online da aplicação através deste link: [Agenda de Contatos](https://agendadecontato.netlify.app/).
 
 By Mateus Fernando
 
