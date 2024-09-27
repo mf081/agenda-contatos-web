@@ -1,0 +1,74 @@
+// Variáveis de cor
+$button-color: #0D99FF; // Cor do botão
+$button-bg: #11A0FF;    // Fundo do cabeçalho da tabela
+$border-color: #DBDBDB;  // Cor da borda das células
+$background-color: #F7F7F7; // Cor de fundo para linhas ímpares da tabela
+$table-bg-even: #FFFFFF; // Cor de fundo para linhas pares da tabela
+
+// Estilos gerais do corpo
+body {
+  width: 100%;                   // Largura total
+  max-width: 1200px;            // Largura máxima
+  margin: auto;                  // Centraliza o conteúdo
+  padding: 60px;                 // Espaçamento interno
+  font-family: "Roboto", sans-serif; // Fonte utilizada
+}
+
+// Estilos para o cabeçalho
+header {
+  text-align: center;            // Centraliza o texto
+  margin-bottom: 20px;           // Espaçamento abaixo do cabeçalho
+  
+  img {
+    width: 15%;                  // Largura da imagem do cabeçalho
+  }
+}
+
+// Estilos para o título principal
+h1 {
+  font-size: 2em;                // Tamanho da fonte
+  font-weight: bold;             // Negrito
+}
+
+// Estilos para subtítulos
+h3 {
+  text-align: left;              // Alinha à esquerda
+  width: 100%;                   // Largura total
+  margin: 0;                     // Remove margem
+}
+
+// Estilos para botões
+button {
+  background-color: $button-color; // Cor de fundo do botão
+  padding: 10px;                  // Espaçamento interno
+  border-radius: 8px;            // Bordas arredondadas
+  color: white;                  // Cor do texto
+  border: none;                  // Remove borda padrão
+  cursor: pointer;               // Cursor em forma de ponteiro ao passar o mouse
+}
+
+// Estilos para tabelas
+table {
+  width: 100%;                   // Largura total da tabela
+  border-collapse: collapse;     // Colapsa bordas adjacentes
+  margin: 20px 0;                // Espaçamento acima e abaixo da tabela
+
+  thead {
+    background-color: $button-bg; // Cor de fundo do cabeçalho da tabela
+    color: white;                 // Cor do texto do cabeçalho
+  }
+
+  th, td {
+    padding: 12px;                // Espaçamento interno das células
+    text-align: left;             // Alinha texto à esquerda
+    border: 1px solid $border-color; // Bordas das células
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: $background-color; // Cor de fundo para linhas ímpares
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: $table-bg-even; // Cor de fundo para linhas pares
+  }
+}

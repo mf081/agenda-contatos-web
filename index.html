@@ -4,41 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício Agenda</title>
-    <link rel="stylesheet" href="./style.css">
+    
+    <!-- Link para o CSS do Bootstrap 4.5, permitindo o uso das classes do Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Pré-conexão com o Google Fonts para melhorar o carregamento de fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Link para a fonte Roboto do Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Folha de estilo personalizada (separada), caso existam ajustes de estilo além do Bootstrap -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <img src="/img/livro-de-contato.png" alt="Logo de Agenda">
+    <!-- Cabeçalho da página -->
+    <header class="text-center mb-4">
+        <!-- Classe text-center alinha o conteúdo centralmente, mb-4 adiciona uma margem inferior -->
+        <img src="/img/livro-de-contato.png" alt="Logo de Agenda" class="mb-3">
+        <!-- Classe mb-3 adiciona margem inferior para o logo -->
         <h1>Minha agenda de contatos</h1>
     </header>
 
-    <main>
-        <section class="novo-contato">
-            <h3>Adicionar novo contato</h3>
+    <!-- Conteúdo principal da página -->
+    <main class="container">
+        <!-- A classe container do Bootstrap cria uma margem automática nas laterais para centralizar o conteúdo -->
         
+        <!-- Seção para adicionar novo contato -->
+        <section class="novo-contato mb-4">
+            <!-- mb-4 adiciona uma margem inferior para separar a seção de "Adicionar novo contato" da tabela -->
+            <h3>Adicionar novo contato</h3>
+            
+            <!-- Formulário de cadastro de contato -->
             <form id="formContato">
-                <label for="nome" class="nome-meio">Nome:</label>
-                <input type="text" id="nome" placeholder="Digite o nome do contato" required>
-    
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" placeholder="Digite o telefone com o DDD" required>
-    
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" placeholder="Digite o email do contato" required>
+                <!-- Agrupamento de campo do formulário com estilo do Bootstrap -->
+                <div class="form-group">
+                    <!-- form-group organiza cada campo do formulário e dá um espaçamento adequado -->
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" class="form-control" placeholder="Digite o nome do contato" required>
+                    <!-- form-control estiliza o campo de input com bordas arredondadas e preenche a largura do container -->
+                </div>
                 
-                <label for="interesses">Interesses:</label>
-                <input type="text" id="interesses" placeholder="Digite os interesses do contato separados por vírgula" required>
-    
-                <button type="submit">Cadastrar</button>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" class="form-control" placeholder="Digite o telefone com o DDD" required>
+                    <!-- form-control também aplicado aqui para o campo de telefone -->
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" class="form-control" placeholder="Digite o email do contato" required>
+                    <!-- form-control também aplicado ao campo de email -->
+                </div>
+
+                <div class="form-group">
+                    <label for="interesses">Interesses:</label>
+                    <input type="text" id="interesses" class="form-control" placeholder="Digite os interesses do contato separados por vírgula" required>
+                    <!-- form-control aplicado ao campo de interesses -->
+                </div>
+                
+                <!-- Botão de envio do formulário -->
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <!-- btn e btn-primary são classes do Bootstrap: btn estiliza o botão e btn-primary aplica a cor azul padrão -->
             </form>
         </section>
 
+        <!-- Seção que contém a tabela de contatos -->
         <section class="tabela-contato">
-            <table border="1">
+            <!-- Tabela básica; não está usando classes Bootstrap diretamente, mas poderia utilizar (como table, table-striped) -->
+            <table>
                 <thead>
+                    <!-- Cabeçalho da tabela -->
                     <tr>
                         <th>Nome</th>
                         <th>Telefone</th>
@@ -48,11 +85,13 @@
                     </tr>
                 </thead>
                 <tbody id="tabela-corpo">
+                    <!-- O corpo da tabela será preenchido dinamicamente via JavaScript -->
                 </tbody>
             </table>
         </section>
     </main>
 
+    <!-- Link para o arquivo de script JavaScript (deve conter a lógica para adicionar contatos e preencher a tabela) -->
     <script src="/app.js"></script>
 </body>
 </html>
